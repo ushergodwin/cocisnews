@@ -12,9 +12,9 @@ This blog is developed using core php and mysql
 
 # Important URLS
 
-The main blog website : localhost/blog/index.php
+The main blog website : localhost/blogs/index.php
 
-Main admin dashboard : localhost/blog/admin/login.php
+Main admin dashboard : localhost/blogs/admin/login.php
 
 Sub admin added by Main Admin : localhost/blog/admin/sublogin.php
 
