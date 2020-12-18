@@ -1,0 +1,198 @@
+body{
+    scroll-behavior: smooth;
+}
+#navbar{
+    margin-bottom: 70px;
+}
+tr > td > button{
+    margin-left: 10px !important;
+}
+tr > td > button > a{
+    text-decoration: none !important;
+    color: white !important;
+}
+tr > td > button > a:hover{
+    text-decoration: none !important;
+}
+.create{
+    position: relative;
+    top: 100px !important;
+}
+.container > .row > .well h4{
+    background-color: #337ab7;
+    padding:5px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    color:whitesmoke;
+}
+.container > .row > .well > form > label{
+    color:gray;
+}
+/*...... homepage styles......*/
+/*..........sliding posts.......*/
+.swipe1{
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    top:-10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swipe1 .swiper-wrapper{
+    height: 100%;
+    width:100%;
+}
+.swipe1 .swiper-wrapper .swiper-slide{
+    text-align: center;
+    height: 100%;
+    font-size: 18px;
+   
+	/*....... center slide vertically.....
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: -webkit-flex !important;
+	display: flex;
+	-webkit-box-pack:center !important;
+	-webkit-justify-content:center !important;
+	justify-content: center !important;
+	-webkit-box-align:center !important;
+	-ms-flex-align:center !important;
+	-ms-align-items: center !important;
+	-webkit-align-items: center !important;
+	align-items: center !important;*/
+}
+.swipe1 .swiper-slide .swiper-slide img{
+    height: auto;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#caption{
+    position:absolute;
+    left: 8%;
+    top:40%;
+    word-break:break-all !important;
+}
+#caption p{
+    font-size
+}
+#content{
+    position: relative;
+    top:50px;
+}
+#content img{
+    max-height:300px !important;
+}
+#well img{
+    max-height: 280px !important;
+}
+#view{
+    margin: 10px 0 10px 0;
+}
+#view > a > button{
+    width: 40%;
+    height: 35px;
+    border: 2px solid #FE6A50;
+    outline: none;
+    background-color: transparent;
+    border-radius: 20px;
+}
+#view > a > button:hover{
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
+.social-media-icons{
+    text-align: center;
+   display:flex;
+   justify-content: center;
+}
+.social-media-icons > a{
+   font-size: 30px !important;
+}
+.social-media-icons a > .fab{
+    width: 100% !important;
+    height: 100% !important;
+}
+@keyframes scale{
+    20%,30%{
+        transform: scale(0.5);
+        transition: 1s ease;
+        transform: rotateZ(1deg);
+    }
+    40%,50%{
+        transition: 1s ease;
+        transform: scale(0.6);
+        transform: rotateZ(2deg);
+    }
+    60%,70%{
+        transform: scale(0.7);
+        transition: 1s ease;
+        transform: rotateZ(2deg);
+    }
+    80%,90%{
+        transition: 1s ease;
+        transform: rotateZ(2deg);
+        transform: scale(0.8);
+    }
+    100%{
+        transition: 1s ease;
+        transform: scale(0.9);
+        transform: rotateZ(2deg);
+    }
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    transition: 1s ease-in-out;
+    bottom: 15px;
+    z-index: 99999;
+  }
+  
+  .back-to-top i {
+    display: flex;
+    transition: 1s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #1977cc;
+    color: #fff;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i:hover {
+    background: #1c84e3;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+  }
+  
+footer{
+   margin-top: 50px;
+}
+
+@media only screen and (max-width: 759px){
+  .swipe1{
+      height: 60vh;
+      margin-bottom:0px;
+  }
+  .swipe1 .swiper-slide .swiper-slide img{
+      width: 100% !important;
+  }
+  #caption p{
+      font-size: 14px !important;
+  }
+  #content{
+    top: -40px;
+  }
+   
+}
