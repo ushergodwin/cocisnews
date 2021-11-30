@@ -2,10 +2,6 @@
 
 Oladayo Ahmod
 
-# WEBSITE URL
-
-www.unitechdev.com
-
 # ABOUT
 
 This blog is developed using core php and mysql 
