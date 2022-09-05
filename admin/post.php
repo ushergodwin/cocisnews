@@ -22,7 +22,7 @@
 				$error= '<div class="alert alert-danger">Image error! check if it is image, not large size and file type is valid</div>'."<br>"; 		
 			}
 			else{
-				$image_path = "../images/".$_FILES['post-img']['name'];
+				$image_path = __DIR__. "/../images/".$_FILES['post-img']['name'];
 				move_uploaded_file($_FILES['post-img']['tmp_name'],$image_path);
 			$query = "INSERT INTO posts(post_title,post_content,post_tag,post_desc,post_category,image_dir,post_author)
 			 VALUES(?,?,?,?,?,?,?)";
@@ -66,7 +66,7 @@
 				//next button for the pagination
 				$next = $page +1;
 				// looping posts from the database to the table with pagination
-				$query = "SELECT * FROM posts ORDER BY id LIMIT $start,$rpp";
+				$query = "SELECT * FROM posts ORDER BY post_date DESC LIMIT $start,$rpp";
 				$stmt = $conn->prepare($query);
 				if($stmt->execute()){
 					$process = $stmt->get_result();
@@ -85,6 +85,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/all.css">
+					    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
 	<link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
 </head>
 <body>     
@@ -132,13 +133,14 @@
                                                         </tr>
                                                     </thead>
 													<?php
-															$count = 1;
+															$count = $no = 1;
 															while ($result = $process->fetch_assoc()) {
+																
                                                                ?>
 														<tbody>
 															<tr>
 																<?php  $pid = $result['id'];?>
-																<td><?php echo $pid; ?></td>
+																<td><?php echo $no; ?></td>
 																<td><?php echo $result['post_title'];?></td>
 																<td><?php echo $result['post_author'];?></td>
 																<td><?php echo $result['post_date'];?></td>
@@ -155,7 +157,7 @@
 															</tr>
 														</tbody>
                                                         
-														<?php $count = $count + 1; }?>
+														<?php $count = $count + 1; $no++;}?>
                                                 </table>
 										    </div>
 										</div>

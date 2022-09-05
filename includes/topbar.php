@@ -1,7 +1,8 @@
 <section id="navbar">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container">
-			<a class="navbar-brand" href="#">Niger Latest</a>
+			<a class="navbar-brand" href="./">
+								<img src="images/cocis/muk.jpeg" width="70" height="70" class="rounded-circle"> Cocis News</a>
 				<button type="button" class="navbar-toggler" arial-expanded="false" arial-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav" arial-controls="navbarNav">
 					<span class="navbar-toggler-icon"></span>
 				</button>

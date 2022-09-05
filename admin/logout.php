@@ -9,7 +9,7 @@
     else {
         session_unset();
         session_destroy();
-        header('location:sublogin.php');
+        header('location:news-editor.php');
     }
     
 ?>

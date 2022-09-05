@@ -27,7 +27,8 @@
 						$meta_tag = mysqli_real_escape_string($conn,strip_tags($_POST['meta-tag']));
 						$meta_dsc = mysqli_real_escape_string($conn,strip_tags($_POST['meta-dsc']));
 						$post_ctg = mysqli_real_escape_string($conn,strip_tags($_POST['post-ctg']));
-						if (empty($post_img)) {
+						if (empty($_FILES['post-img'])) {
+								
 							$query = "UPDATE posts SET post_title=?,post_content=?,post_tag=?,post_desc=?,post_category=?
 							WHERE id =?";
 							$stmt = $conn->prepare($query);
@@ -46,7 +47,7 @@
 								$error= '<div class="alert alert-danger"> Error! check if it is image, not large size and file type is valid</div>'."<br>"; 		
 							}
 							else{
-								$image_path = "../images/".$_FILES['post-img']['name'];
+								$image_path = __DIR__ ."/../images/".$_FILES['post-img']['name'];
 								move_uploaded_file($_FILES['post-img']['tmp_name'],$image_path);
 							$query = "UPDATE posts SET post_title=?,post_content=?,post_tag=?,post_desc=?,post_category=?,image_dir=?
 							WHERE id =?";
@@ -74,6 +75,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
+					    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
     <style type="text/css">
 		td > button{
 			margin-right: 10px;

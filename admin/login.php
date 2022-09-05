@@ -35,22 +35,26 @@
     <title>Admin | Login</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
+    				    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body style="background: #f5f5f5 !important;
 "> 
                 <div class="container create">
                     <div class="row justify-content-center align-items-center">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                         <div class="card shadow p-2">
-                        <h4 style="border-radius: 5px;" class="bg-primary text-white text-center">Login page</h4>
+                        <h4 class="card-header py-1 bg-success text-white text-center">Admin Login page</h4>
                             <div><?php echo $error;?></div>
-                        <form class="form-group" action="" method="POST" enctype="multipart/form-data">
+                        <form class="fcard-body" action="" method="POST" enctype="multipart/form-data">
                             <label for="Username">Enter email</label><br>
                             <input type="email" name="email" class="form-control" value=""><br>
                             <label for="Username">Enter password</label><br>
                             <input type="password" name="password" class="form-control" value=""><br>
-                            <button type="submit" class="btn btn-primary" name="login">Login</button>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary" name="login">Login</button>
+                                <h5>News Editor? <a href="./news-editor.php">Login Here</a></h5>
+                            </div>
                         </form>
                         </div>          
                     </div>  

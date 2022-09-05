@@ -5,7 +5,7 @@
     require_once 'connection/db.php';
 
     // querying for the latest category
-    $query = "SELECT * FROM posts WHERE post_category = ? LIMIT 8";
+    $query = "SELECT * FROM posts WHERE post_category = ? ORDER BY post_date DESC LIMIT 8";
     $lat_cat = 'latest';
     $stmt = $conn->prepare($query);
     $stmt->bind_param('s',$lat_cat);
@@ -77,7 +77,7 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="apple-touch-icon" style="border-radius: 10px;" sizes="180x180" href="images/Desert.jpg">
-    <link rel="icon" type="image/jpg" sizes="16x16" href="images/Desert.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="images/cocis/muk.jpeg">
     <link rel="canonical" href="https://unitechdev.com">
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
@@ -85,7 +85,7 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css"><!--version 4.1-->
-    <title>Niger latest</title>
+    <title>Cocis News</title>
 </head>
 <body>
                             <div id="home"></div>
@@ -119,7 +119,7 @@
                     <div class="row">
                         <!--latest section-->
                         
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                                     <?php 
                                   
                                         while($result = $latest->fetch_assoc()){
@@ -136,7 +136,7 @@
                                                      
                                                      <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date'];?></small>
                                                      <small class="text-right"><i>Posted by </i><?php echo $result['post_author'];?></small>
-                                                    <a href="viewpost?vid=<?php echo $result['id'];?>" class="btn btn-primary btn-sm">Read More</a>
+                                                    <a href="viewpost?vid=<?php echo $result['id'];?>" class="btn btn-primary btn-sm stretched-link">Read More</a>
                                                 </div>
                                                 </div>
                                         <?php } ?>
@@ -285,8 +285,8 @@
             <!--back to top-->
             <a href="#home" rel="nofollow" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 <!-- footer section--->
-<footer class="footer footer-default" style="height: device-height; width: 100%; background-color:black;padding-top:15px;color:gray; ">
-    <p class="text-center">Copyright &copy; 2020 All rights reserved | Developed by <span><a style="text-decoration:none;color:red;" href="www.unitechdev.com">Unitech</a><span></p>
+<footer class="footer footer-default" style="height: 100px; width: 100%; background-color:black;padding-top:15px;color:gray; ">
+    <p class="text-center">Copyright &copy; 2020 COCIS NEWS. All rights reserved</p>
 </footer>
 
                         <script src="js/jquery.min.js"></script>

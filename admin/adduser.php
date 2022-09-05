@@ -89,6 +89,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/all.css">
 	<link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
+					    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
 	<style type="text/css">
 		td > button{
 			margin-right: 10px;

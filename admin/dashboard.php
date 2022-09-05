@@ -9,7 +9,7 @@
         
 	}
 	
-		
+		//die($_SERVER['DOCUMENT_ROOT']);
            
 			
 		// if post is submitted
@@ -26,7 +26,9 @@
 			}
 			else{
 				$image_path = "../images/".$_FILES['post-img']['name'];
-				move_uploaded_file($_FILES['post-img']['tmp_name'],$image_path);
+				$path = $_SERVER['DOCUMENT_ROOT'] . "/cocis/images/" . $_FILES['post-img']['name'];
+
+				move_uploaded_file($_FILES['post-img']['tmp_name'],$path);
 				//inserting to the database with prepared statement method
 			$query = "INSERT INTO posts(post_title,post_content,post_tag,post_desc,post_category,post_author,image_dir)
 			 VALUES(?,?,?,?,?,?,?)";
@@ -63,6 +65,7 @@
 				<link rel="stylesheet" type="text/css" href="../css/style.css">
 				<link rel="stylesheet" type="text/css" href="../css/all.css">
 				<link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
+				    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
 				<style type="text/css">
 					td > button{
 						margin-right: 5px;
@@ -142,7 +145,7 @@
 																<td><?php echo $result['post_category'];?></td>
 																<td style="display:flex;">
 									
-                                                                <a style="color:white;text-decoration:none;" href="editpost.php?pid=<?php echo $pid;?>"><i class="fas fa-pen mr-2 text-primary"></i></a>                                      
+                                                                <a style="color:white;text-decoration:none;" href="editpost.php?pid=<?php echo $pid;?>"><i class="fas fa-pen mr-2 text-success"></i></a>                                      
                                                                 <a style="color:white;text-decoration:none;" href="deletepost.php?pid=<?php echo $pid;?>"><i class="fas fa-trash mr-2 text-danger"></i>
                                                                 </a>
 																</td>

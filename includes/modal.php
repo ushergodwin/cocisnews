@@ -1,6 +1,6 @@
 <!-- modals section for adding page--->
 <div class="modal fade" id="addpage" tabindex="-1" role="dialog" arial-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h4 class="modal-title" id="myModalLabel">Add post</h4>

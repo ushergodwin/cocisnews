@@ -53,7 +53,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <title>Naija Latest</title>
+        <link rel="icon" type="image/jpg" sizes="16x16" href="images/cocis/muk.jpeg">
+    <title>Cocis News | Politics</title>
 </head>
 <body>
                             <!--including topbar-->
@@ -82,7 +83,7 @@
             <div class="container">
                 <div class="row">
                     <!--first column-->
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                     <?php while ($result = $latest->fetch_assoc()) {
                             $explode = explode("../",$result['image_dir']);
                         ?>
@@ -103,7 +104,7 @@
                     </div><br>
 
                     <!--second column-->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                      <div class="list-group" style="margin:40px 0 10px 0;">
                      <a href="#" class="list-group-item active">Categories</a>
                             <a href="latest" class="list-group-item">Latest </a>
@@ -140,9 +141,7 @@
         <?php include 'includes/blog_modal.php'; ?>
             <!-- bootstrap modal ends -->
             <!-- footer section--->
-            <footer class="footer footer-default" style="height: auto; width: 100%; background-color:black;padding-top:15px;color:gray; ">
-                <p class="text-center">Copyright &copy; 2020 All rights reserved | Developed by <span><a style="text-decoration:none;color:red;" href="www.unitechdev.com">Unitech</a><span></p>
-            </footer>
+            <?php include 'includes/footer.php'; ?>
        
 
 
