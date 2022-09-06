@@ -1,16 +1,4 @@
-RewriteEngine on
-
-RewriteRule ^latest?$ latest.php
-
-RewriteRule ^education?$ education.php
-
-RewriteRule ^politics?$ politics.php
-
-RewriteRule ^popular?$ popular.php
-
-RewriteRule ^sports?$ sports.php
-
-RewriteRule ^index?$ index.php
-
-RewriteRule ^viewpost?$ viewpost.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 

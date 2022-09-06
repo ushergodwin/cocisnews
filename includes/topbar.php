@@ -16,10 +16,10 @@
                 <li class="nav-item"><a class="nav-link" href="sports">Sport</a></li>
                 <li class="nav-item" style="cursor:pointer;"><a class="nav-link" type="button" data-toggle="modal" data-target="#contact">Contact</a></li>
 			</ul>
-			<!-- <p class="nav navbar-text ml-auto text-primary"> -->
-			<!-- <a href="#" class="navbar-link navbar-primary">Subscribe</a> -->
-            <!--  </p> -->
+			<div class="nav navbar-text ml-auto text-primary">
+			<a href="./admin/login" class="navbar-link navbar-primary">Login</a>
+			</div>
 		</div>
 	</div>
 </nav>
-    </section>
+</section>
