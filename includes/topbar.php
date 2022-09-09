@@ -12,9 +12,10 @@
 				<li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="latest">Latest</a></li>
                 <li class="nav-item"><a class="nav-link" href="politics">Politics</a></li>
-                <li class="nav-item"><a class="nav-link" href="education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="career">Career</a></li>
                 <li class="nav-item"><a class="nav-link" href="sports">Sport</a></li>
-                <li class="nav-item" style="cursor:pointer;"><a class="nav-link" type="button" data-toggle="modal" data-target="#contact">Contact</a></li>
+				<li class="nav-item"><a class="nav-link" href="./events/index.php"><i class="fas fa-calendar"></i> Events</a></li>
+				<li class="nav-item"><a class="nav-link" href="./timetable.php"><i class="fas fa-table"></i> TimeTable</a></li>
 			</ul>
 			<div class="nav navbar-text ml-auto text-primary">
 			<a href="./admin/login" class="navbar-link navbar-primary">Login</a>

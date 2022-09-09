@@ -95,9 +95,8 @@
 											<option value="" disabled selected>Choose Category</option>
 											<option value="Popular">Popular</option>
 											<option value="latest">Latest</option>
-											<option value="education">Education</option>
+											<option value="career">Career</option>
 											<option value="politics">Politics</option>
-											<option value="sponsored">Sponsored</option>
 											<option value="sports">Sports</option>
 											<option value="other news">Other News</option>
 											

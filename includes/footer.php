@@ -5,3 +5,8 @@ style="height: 100px; width: 100%; background-color:black;padding-top:15px;color
         
     </p>
 </footer>
+    <script type="text/javascript">
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>

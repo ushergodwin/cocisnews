@@ -5,25 +5,21 @@
     require_once 'connection/db.php';
 
     // querying for the latest category
-    $query = "SELECT * FROM posts WHERE post_category = ? ORDER BY post_date LIMIT 8";
-    $lat_cat = 'latest';
+    $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 8";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param('s',$lat_cat);
     $stmt->execute();
     $latest = $stmt->get_result();
     $stmt->close();
 
     // second querying for the latest category
-    $query = "SELECT * FROM posts WHERE post_category = ? ORDER BY post_date LIMIT 8,8";
-    $sec_cat = 'latest';
+    $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 8,8";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param('s',$sec_cat);
     $stmt->execute();
     $second_cat = $stmt->get_result();
     $stmt->close();
 
      // querying for the latest category for sliding posts
-     $query = "SELECT * FROM posts WHERE post_category = ? ORDER BY post_date LIMIT 5";
+     $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 5";
      $sli_cat = 'latest';
      $stmt = $conn->prepare($query);
      $stmt->bind_param('s',$sli_cat);
