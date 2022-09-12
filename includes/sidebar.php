@@ -6,10 +6,26 @@ $number = $conn->query($count);
 $fetch = mysqli_fetch_array($number);
 
 //counting the total registered users except the admin
-$count_user = "SELECT COUNT(*) AS reg_users FROM subusers";
+$count_user = "SELECT COUNT(*) AS reg_users FROM admin_detail";
 $users_num = $conn->query($count_user);
 $fetch_users = mysqli_fetch_array($users_num);
+$count_writers = "SELECT COUNT(*) AS writers FROM subusers";
+$writers_num = $conn->query($count_writers);
+$writers = mysqli_fetch_array($writers_num);
 
+$users = $fetch_users['reg_users'] + $writers['writers'];
+
+$events_result = $conn->query("SELECT COUNT(*) as `count` FROM event_calendar");
+$events_result = mysqli_fetch_object($events_result);
+$events = $events_result->count;
+
+$visits_result = $conn->query("SELECT MAX(num) as visits FROM views");
+$visits_result = mysqli_fetch_object($visits_result);
+$visits = $visits_result->visits;
+
+$timetable_result = $conn->query("SELECT COUNT(*) as `count` FROM timetable");
+$timetable_result = mysqli_fetch_object($timetable_result);
+$timetable = $timetable_result->count;
 
 ?>
 
@@ -22,6 +38,7 @@ $fetch_users = mysqli_fetch_array($users_num);
 				<a href="#" class="list-group-item">Pages <span class="badge badge-pill badge-warning">10</span></a>
 				<a href="#" class="list-group-item">Posts <span class="badge badge-pill badge-warning"><?php echo $fetch['posted']; ?></span></a>
 				<a href="#" class="list-group-item">Admin <span class="badge badge-pill badge-warning"><?php echo $fetch_users['reg_users']; ?></span></a>
+				<a href="#" class="list-group-item">Writers <span class="badge badge-pill badge-warning"><?php echo $writers['writers']; ?></span></a>
 			</div><br>
 			<!-- well---->
 			<div class="card shadow p-2">

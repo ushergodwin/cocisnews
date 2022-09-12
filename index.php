@@ -97,8 +97,9 @@ $stmt->close();
                 $explode = explode("../", $result['image_dir']);
             ?>
                 <div class="swiper-slide">
-                    <a href="viewpost?vid=<?php echo $result['id']; ?>"><img src="<?= $explode[1]; ?>" alt="sliding image" class="img-fluid card-img-top">
-                        <div class="card-title bg-secondary ml-4 text-center" id="caption">
+                    <a href="viewpost?vid=<?php echo $result['id']; ?>">
+                        <img src="<?= $explode[1]; ?>" alt="sliding image" class="img-fluid card-img-top">
+                        <div class="card-title ml-4 text-center" id="caption" style="background-color: green; opacity: 0.5; padding: 10px; border-radius: 5px;">
                             <p class="text-white"><?php echo $result['post_desc']; ?></p>
                         </div>
                     </a>

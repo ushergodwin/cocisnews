@@ -88,25 +88,25 @@ if ($stmt->execute()) {
 				<div class="row p-2">
 					<div class="col-md-3 my-2 card-body text-center">
 
-						<h2>200</h2>
+						<h2><?=$users ?></h2>
 						<h4>Users</h4>
 
 					</div>
 					<div class="col-md-3 my-2 text-center card-body ">
 
-						<h2>200</h2>
-						<h4>Pages</h4>
+						<h2> <?= $timetable ?></h2>
+						<h4> Schedules </h4>
 
 					</div>
 					<div class="col-md-3 my-2 text-center card-body ">
 
-						<h2>1000</h2>
-						<h4>Posts</h4>
+						<h2><?= $events ?></h2>
+						<h4>Events</h4>
 
 					</div>
 					<div class="col-md-3 my-2 text-center card-body ">
 
-						<h2>20000</h2>
+						<h2><?= $visits ?></h2>
 						<h4>Visitors</h4>
 
 					</div>
