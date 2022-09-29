@@ -287,7 +287,7 @@ $stmt->close();
     <a href="#home" rel="nofollow" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     <!-- footer section--->
     <footer class="footer footer-default" style="height: 100px; width: 100%; background-color:black;padding-top:15px;color:gray; ">
-        <p class="text-center">Copyright &copy; 2020 COCIS NEWS. All rights reserved</p>
+        <p class="text-center">Copyright &copy; 2022 COCIS NEWS. All rights reserved</p>
     </footer>
 
     <script src="js/jquery.min.js"></script>
