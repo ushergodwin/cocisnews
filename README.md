@@ -1,6 +1,6 @@
 # AUTHOR
 
-Oladayo Ahmod
+David Irad
 
 # ABOUT
 
