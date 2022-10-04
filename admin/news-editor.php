@@ -41,6 +41,8 @@
 </head>
 <body style="background: #f5f5f5 !important;
 "> 
+ <!--including topbar-->
+ <?php include 'topbar.php'; ?>
                 <div class="container create">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-6">

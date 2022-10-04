@@ -14,6 +14,11 @@
     <script src='fullcalendar/packages/list/main.js'></script>
     <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
     <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="muk.jpeg">
     <style>
         /*
         tooltip css
@@ -201,6 +206,9 @@
 </head>
 
 <body>
+      <!--including topbar-->
+      <?php include 'topbar.php'; ?>
+  
     <center>
         <a class="navbar-brand" href="../">
             <img src="../images/cocis/muk.jpeg" width="70" height="70" class="rounded-circle"> 

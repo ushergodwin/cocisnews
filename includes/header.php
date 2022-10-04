@@ -12,6 +12,7 @@
 
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-secondary" href="../index.php">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="post.php"><i class="fab fa-blogger-b mr-1 text-success"></i>Posts</a></li>
 					<?php
 					if (isset($_SESSION['role'])) {

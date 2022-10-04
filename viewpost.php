@@ -330,13 +330,12 @@
                         <div class="col-md-4">
                             <h2>Categories</h2>
                              <div class="list-group" style="margin:40px 0 10px 0;">
-                                    <a href="#" class="list-group-item active">Categories</a>
-                                    <a href="latest" class="list-group-item">Latest </a>
-                                    <a href="popular" class="list-group-item primary">Popular</a>
-                                    <a href="politics" class="list-group-item">politics </a>
-                                    <a href="sports" class="list-group-item">Sports </a>
-                                    <a href="education" class="list-group-item">Education </a>
-                                    <a href="#" class="list-group-item">Other News </a>
+                             <a href="index" class="list-group-item active">Home </a>
+                        <a href="popular" class="list-group-item  primary">Popular</a>
+                        <a href="politics" class="list-group-item">politics </a>
+                        <a href="sports" class="list-group-item">Sports </a>
+                        <a href="career" class="list-group-item">Career </a>
+                        <a href="events/index.php" class="list-group-item">Events</a>
                             </div>
                             <hr/>
                             <h2>Related Posts</h2>

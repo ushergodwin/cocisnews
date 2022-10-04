@@ -38,8 +38,10 @@
     				    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body style="background: #f5f5f5 !important;
-"> 
+<body style="background: #f5f5f5 !important;"> 
+ <!--including topbar-->
+ <?php include 'topbar.php'; ?>
+
                 <div class="container create">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-6">
@@ -60,5 +62,7 @@
                     </div>  
                 </div>
                 </div>
+                <div>
+               
 </body>
 </html>
