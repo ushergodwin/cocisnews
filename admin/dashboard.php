@@ -43,6 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 // looping posts from the database to the table
 $query = "SELECT * FROM posts ORDER BY id DESC LIMIT 7";
+if(isset($_SESSION['is_editor'])) {
+	$username = $_SESSION['username'];
+	$query = "SELECT * FROM posts WHERE post_author = '$username' ORDER BY id DESC LIMIT 7";
+}
 $stmt = $conn->prepare($query);
 if ($stmt->execute()) {
 	$process = $stmt->get_result();
@@ -158,6 +162,12 @@ if ($stmt->execute()) {
 								</tbody>
 							<?php $count = $count + 1;
 							} ?>
+
+							<?php if($count === 1): ?>
+								<div class="alert alert-info">
+									You do not have posts yet!
+								</div>
+							<?php endif ?>
 						</table>
 					</div>
 				</div>

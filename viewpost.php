@@ -178,27 +178,6 @@
         <!--including topbar-->
         <?php include 'includes/topbar.php';?>
 
-                        <!-- swiper sliding posts page-->
-                        <div class="swiper-container swipe1">
-                            <div class="swiper-wrapper">
-                                <?php while ($result = $sliding->fetch_assoc()) {
-                                    $explode = explode('../',$result['image_dir']);
-                                    ?>
-                            <div class="swiper-slide">
-                              <a href="viewpost?vid=<?= $result['id'];?>"><img src="<?= $explode[1];?>" class="img-fluid card-img-top" alt="sliding image"></a>
-                              <div class="card-title bg-secondary ml-4 text-center" id="caption">
-                                <p class="text-white"><?= $result['post_desc'];?></p>
-                            </div>
-                            </div>
-                           
-                                <?php }?>
-                            
-                            </div>
-                            <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
-                           
-                        </div>
-
         <!--view-post section-->
         <section id="section">
             <div class="container">
@@ -335,8 +314,6 @@
                                     <a href="popular" class="list-group-item primary">Popular</a>
                                     <a href="politics" class="list-group-item">politics </a>
                                     <a href="sports" class="list-group-item">Sports </a>
-                                    <a href="education" class="list-group-item">Education </a>
-                                    <a href="#" class="list-group-item">Other News </a>
                             </div>
                             <hr/>
                             <h2>Related Posts</h2>

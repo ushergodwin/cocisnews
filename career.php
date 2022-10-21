@@ -87,23 +87,27 @@ $stmt->close();
             <div class="row">
                 <!--first column-->
                 <div class="col-md-8">
-                    <?php while ($result = $latest->fetch_assoc()) {
-                        $explode = explode("../", $result['image_dir']);
-                    ?>
-                        <h1><?php echo $result['post_title']; ?></h1>
-                        <div class="card shadow">
-                            <div>
-                                <img src="<?= $explode[1]; ?>" class="img-fluid card-img-top" alt="post image">
-                            </div>
-                            <div class="card body p-2">
-                                <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
+                    <div class="row">
+                        <?php while ($result = $latest->fetch_assoc()) {
+                            $explode = explode("../", $result['image_dir']);
+                        ?>
+                        <div class="col-md-6">
+                            <h1><?php echo $result['post_title']; ?></h1>
+                            <div class="card shadow">
+                                <div>
+                                    <img src="<?= $explode[1]; ?>" class="img-fluid card-img-top" alt="post image">
+                                </div>
+                                <div class="card body p-2">
+                                    <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
 
-                                <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
-                                <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
-                                <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
+                                    <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
+                                    <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
+                                    <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
+                                </div>
                             </div>
                         </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div><br>
 
                 <!--second column-->

@@ -65,6 +65,9 @@ $previous = $page - 1;
 $next = $page + 1;
 // looping posts from the database to the table with pagination
 $query = "SELECT * FROM posts ORDER BY post_date DESC LIMIT $start,$rpp";
+if(isset($_SESSION['is_editor'])) {
+	$query = "SELECT * FROM posts WHERE post_author = '$username' ORDER BY post_date DESC LIMIT $start,$rpp";
+}
 $stmt = $conn->prepare($query);
 if ($stmt->execute()) {
 	$process = $stmt->get_result();
@@ -162,6 +165,11 @@ if ($stmt->execute()) {
 							<?php $count = $count + 1;
 								$no++;
 							} ?>
+							<?php if($count === 1): ?>
+								<div class="alert alert-info">
+									You do not have posts yet!
+								</div>
+							<?php endif ?>
 						</table>
 					</div>
 				</div>

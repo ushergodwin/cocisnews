@@ -1,8 +1,15 @@
+<div class="container-fluid d-flex">
+	<img src="https://som.mak.ac.ug/wp-content/uploads/2022/02/som100color.png" height="100"/>
+	<img src="https://som.mak.ac.ug/wp-content/uploads/2022/02/som100color.png" height="100"/>
+	<img src="https://som.mak.ac.ug/wp-content/uploads/2022/02/som100color.png" height="100"/>
+
+</div>
 <section id="navbar">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container">
 			<a class="navbar-brand" href="./">
-								<img src="images/cocis/muk.jpeg" width="70" height="70" class="rounded-circle"> Cocis News</a>
+				Cocis News
+			</a>
 				<button type="button" class="navbar-toggler" arial-expanded="false" arial-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav" arial-controls="navbarNav">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -13,7 +20,7 @@
 				<li class="nav-item"><a class="nav-link" href="latest">Latest</a></li>
                 <li class="nav-item"><a class="nav-link" href="politics">Politics</a></li>
                 <li class="nav-item"><a class="nav-link" href="career">Career</a></li>
-                <li class="nav-item"><a class="nav-link" href="sports">Sport</a></li>
+                <li class="nav-item"><a class="nav-link" href="sports">Sports</a></li>
 				<li class="nav-item"><a class="nav-link" href="./events/index.php"><i class="fas fa-calendar"></i> Events</a></li>
 				<li class="nav-item"><a class="nav-link" href="./timetable.php"><i class="fas fa-table"></i> TimeTable</a></li>
 			</ul>

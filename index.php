@@ -121,31 +121,32 @@ $stmt->close();
                 <!--latest section-->
 
                 <div class="col-md-8">
+                    <div class="row">
                     <?php
 
                     while ($result = $latest->fetch_assoc()) {
                         $explode = explode("../", $result['image_dir']);
 
                     ?>
+                        <div class="col-md-6">
+                            <div class="card shadow my-3 mt-3">
+                                <div>
+                                    <img src="<?= $explode[1]; ?>" alt="blog post image" class="card-img-top">
+                                </div>
+                                <div class="card body p-2">
+                                    <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
 
-                        <div class="card shadow my-3">
-                            <div>
-                                <img src="<?= $explode[1]; ?>" alt="blog post image" class="card-img-top">
-                            </div>
-                            <div class="card body p-2">
-                                <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
-
-                                <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
-                                <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
-                                <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm stretched-link">Read More</a>
+                                    <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
+                                    <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
+                                    <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm stretched-link">Read More</a>
+                                </div>
                             </div>
                         </div>
                     <?php } ?>
                     <!--view all button-->
-                    <div class="text-center py-4" id="view">
-                        <a href="latest.php"><button>View all</button></a>
-                    </div>
                 </div>
+                </div>
+
 
 
                 <!--category section-->
@@ -156,31 +157,7 @@ $stmt->close();
                         <a href="popular" class="list-group-item primary">Popular</a>
                         <a href="politics" class="list-group-item">politics </a>
                         <a href="sports" class="list-group-item">Sports </a>
-                        <a href="education" class="list-group-item">Education </a>
-                        <a href="#" class="list-group-item">Other News </a>
                     </div>
-
-
-                    <!--popular section-->
-                    <h2>Popular</h2>
-                    <?php
-                    while ($result = $popular->fetch_assoc()) {
-                        $explode = explode("../", $result['image_dir']);
-                    ?>
-
-                        <div class="card shadow my-3">
-                            <div>
-                                <img src="<?= $explode[1]; ?>" class="img-fluid card-img-top" alt="blog post image">
-                            </div>
-                            <div class="card body p-2">
-                                <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
-
-                                <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
-                                <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
-                                <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    <?php } ?>
                 </div>
 
             </div>
@@ -190,8 +167,6 @@ $stmt->close();
 
         <!-- second category of the blog--->
         <div class="container">
-            <!--flashback category-->
-            <h2>Flashback</h2>
             <div class="row">
 
 
@@ -250,34 +225,7 @@ $stmt->close();
             </div>
         </div>
         <!-- Another row of the post--->
-        <div class="container">
-            <h2>Other News</h2>
-            <div class="row">
 
-
-                <?php
-                while ($result = $otherNews->fetch_assoc()) {
-                    $explode = explode("../", $result['image_dir']);
-                ?>
-                    <div class="col-md-3">
-                        <div class="card shadow my-2">
-                            <div>
-                                <img src="<?= $explode[1]; ?>" alt="post picture" class="card-img-top">
-                            </div>
-                            <div class="card body p-2">
-                                <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
-
-                                <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date']; ?></small>
-                                <small class="text-right"><i>Posted by </i><?php echo $result['post_author']; ?></small>
-                                <a href="viewpost?vid=<?php echo $result['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                <?php }; ?>
-
-
-            </div>
-        </div>
     </section>
     <br>
     <!-- bootstrap modal -->

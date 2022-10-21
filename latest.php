@@ -5,21 +5,21 @@
     require_once 'connection/db.php';
 
     // querying for the latest category
-    $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 8";
+    $query = "SELECT * FROM posts ORDER BY post_date DESC LIMIT 8";
     $stmt = $conn->prepare($query);
     $stmt->execute();
     $latest = $stmt->get_result();
     $stmt->close();
 
     // second querying for the latest category
-    $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 8,8";
+    $query = "SELECT * FROM posts ORDER BY post_date DESC LIMIT 6,6";
     $stmt = $conn->prepare($query);
     $stmt->execute();
     $second_cat = $stmt->get_result();
     $stmt->close();
 
      // querying for the latest category for sliding posts
-     $query = "SELECT * FROM posts WHERE  ORDER BY post_date DESC LIMIT 5";
+     $query = "SELECT * FROM posts ORDER BY post_date DESC LIMIT 5";
      $sli_cat = 'latest';
      $stmt = $conn->prepare($query);
      $stmt->bind_param('s',$sli_cat);
@@ -80,23 +80,27 @@
                 <div class="row">
                     <!--first column-->
                     <div class="col-md-8">
-                    <?php while ($result = $latest->fetch_assoc()) {
-                            $explode = explode("../",$result['image_dir']);
-                        ?>
-                        <h1><?php echo $result['post_title'];?></h1>
-                        <div class="card shadow">
-                            <div>
-                                <img src="<?= $explode[1];?>" class="img-fluid card-img-top" alt="post image">
-                            </div>
-                            <div class="card body p-2">
-                                <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
-                                    
-                                    <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date'];?></small>
-                                    <small class="text-right"><i>Posted by </i><?php echo $result['post_author'];?></small>
-                                <a href="viewpost?vid=<?= $result['id'];?>" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
+                        <div class="row">
+                            <?php while ($result = $latest->fetch_assoc()) {
+                                    $explode = explode("../",$result['image_dir']);
+                                ?>
+                                <div class="col-md-6">
+                                    <h1><?php echo $result['post_title'];?></h1>
+                                    <div class="card shadow">
+                                        <div>
+                                            <img src="<?= $explode[1];?>" class="img-fluid card-img-top" alt="post image">
+                                        </div>
+                                        <div class="card body p-2">
+                                            <h3 class="card-title"><?php echo strip_tags($result['post_desc']); ?></h3>
+                                                
+                                                <small class="text-left"><span class="fas fa-clock text-primary "></span> <?php echo $result['post_date'];?></small>
+                                                <small class="text-right"><i>Posted by </i><?php echo $result['post_author'];?></small>
+                                            <a href="viewpost?vid=<?= $result['id'];?>" class="btn btn-primary btn-sm">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php }?>
                         </div>
-                            <?php }?>
                     </div><br>
 
                     <!--second column-->
@@ -107,15 +111,16 @@
                             <a href="popular" class="list-group-item primary">Popular</a>
 							<a href="politics" class="list-group-item">politics </a>
                             <a href="sports" class="list-group-item">Sports </a>
-							<a href="education" class="list-group-item">Education </a>
-                            <a href="#" class="list-group-item">Other News </a>
                     </div>
 
-                    <?php while ($result = $second_cat->fetch_assoc()) {?>
+                    <?php while ($result = $second_cat->fetch_assoc()) {
+                        $explode = explode("../",$result['image_dir']);
+                        ?>
+                        
                         <h1><?php echo $result['post_title'];?></h1>
                         <div class="card shadow">
                             <div>
-                                <img src="<?php echo $result['image_dir'];?>" class="img-fluid card-img-top" alt="post image">
+                                <img src="<?= $explode[1];?>" class="img-fluid card-img-top" alt="post image">
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo strip_tags($result['post_desc']);?></h3>

@@ -38,11 +38,10 @@
     				    <link rel="icon" type="image/jpg" sizes="16x16" href="../images/cocis/muk.jpeg">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body style="background: #f5f5f5 !important;
-"> 
-                <div class="container create">
+<body style="background: #f5f5f5 !important;"> 
+                <div class="container">
                     <div class="row justify-content-center align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mt-2">
                         <div class="card shadow p-2">
                         <h4 class="card-header py-1 bg-success text-white text-center">Admin Login page</h4>
                             <div><?php echo $error;?></div>
@@ -60,5 +59,6 @@
                     </div>  
                 </div>
                 </div>
+<?php include '../includes/footer.php' ?>
 </body>
 </html>

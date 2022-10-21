@@ -17,6 +17,7 @@
                     if ($result['id'] > 0) {
                         $_SESSION['id'] = $result['id'];
                         $_SESSION['username'] = $result['username'];
+                        $_SESSION['is_editor'] = true;
                          $stmt->close();
                         header("location:dashboard.php");
                     }   
@@ -41,7 +42,7 @@
 </head>
 <body style="background: #f5f5f5 !important;
 "> 
-                <div class="container create">
+                <div class="container mt-2">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-6">
                         <div class="card shadow p-2">
@@ -58,5 +59,6 @@
                     </div>  
                 </div>
                 </div>
+                <?php include '../includes/footer.php' ?>
 </body>
 </html>
